@@ -1,15 +1,15 @@
 function registerStudent(){
 
   const name = document.getElementById("name").value;
-  const roll = document.getElementById("roll").value;
+  const group = document.getElementById("group").value;
 
-  if(name === "" || roll === ""){
+  if(name === "" || group === ""){
     alert("Fill all fields");
     return;
   }
 
   localStorage.setItem("studentName", name);
-  localStorage.setItem("studentRoll", roll);
+  localStorage.setItem("studentGroup", group);
   localStorage.setItem("studentRegistered", "true");
 
   window.location.href = "scanner.html";

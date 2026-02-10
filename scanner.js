@@ -1,7 +1,7 @@
 const validQR = "MPOWER_" + new Date().toISOString().slice(0,10).replace(/-/g,"_");
 
 const studentName = localStorage.getItem("studentName");
-const studentRoll = localStorage.getItem("studentRoll");
+const studentGroup = localStorage.getItem("studentGroup");
 
 if(!studentName){
   window.location.href = "register.html";
@@ -13,12 +13,12 @@ function onScanSuccess(decodedText){
 
     const attendance = JSON.parse(localStorage.getItem("attendance")) || [];
 
-    attendance.push({
-      name: studentName,
-      roll: studentRoll,
-      date: new Date().toISOString().slice(0,10),
-      time: new Date().toLocaleTimeString()
-    });
+   attendance.push({
+  name: studentName,
+  group: studentGroup,
+  date: new Date().toISOString().slice(0,10),
+  time: new Date().toLocaleTimeString()
+});
 
     localStorage.setItem("attendance", JSON.stringify(attendance));
 
