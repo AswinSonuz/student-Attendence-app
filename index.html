@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M-Power Attendance</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+    <h1>M-Power Attendance</h1>
+    <p>Scan the QR code displayed on the board</p>
+
+    <div id="reader"></div>
+
+    <div id="result" class="hidden">
+      <h2>✅ Attendance Marked</h2>
+      <p id="time"></p>
+    </div>
+
+    <div id="error" class="hidden">
+      <h2>❌ Invalid QR</h2>
+      <p>Attendance not recorded</p>
+    </div>
+  </div>
+
+  <!-- QR Scanner Library -->
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <script src="script.js"></script>
+</body>
+</html>
